@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html ng-app="app">
+<head>
+    <title>CRUD de todo</title>
+
+    <!-- BootStrap em cdn pra ganhar performance (vai fazer cache) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   
+   
+    <script src="Assets/Scripts/angular.js"></script>
+
+    <script src="https://rawgit.com/betsol/angular-input-date/master/src/angular-input-date.js"></script>
+
+    <script src="/Assets/Scripts/angular-ui-router.min.js"></script>
+    <script src="/Assets/Scripts/ui-bootstrap-tpls-1.1.2.min.js"></script>
+
+    <!-- CORE -->
+    <script src="app/core/modules/app.module.js"></script>
+    <script src="app/core/config/app.config.js"></script>
+
+    <!-- TODO -->
+    <script src="app/todo/directives/todo.form.js"></script>
+    <script src="app/todo/directives/todo.list.js"></script>
+    
+    <script src="app/todo/controllers/todoCadastrar.controller.js"></script>
+    <script src="app/todo/controllers/todoListar.controller.js"></script>
+    <script src="app/todo/controllers/todoEditar.controller.js"></script>
+    <script src="app/todo/controllers/main.controller.js"></script>
+    <script src="app/todo/controllers/todoPesquisar.controller.js"></script>
+    <script src="app/todo/constants/constants.js"></script>
+
+
+    <script src="app/todo/services/todoService.js"></script>
+
+
+</head>
+<body ui-view class="container">
+
+</body>
+</html>

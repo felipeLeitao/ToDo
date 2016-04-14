@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProntMed.Todo.WebApi", "ProntMed.Todo.WebApi\ProntMed.Todo.WebApi.csproj", "{1F486D54-FC26-4ECF-8650-DAFB46E6E76C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{98240E64-8B17-45E4-8DB6-E2CDCDD5FB84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{18F0ECA5-991F-4AD7-8408-CF352F17CC39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{871A72DE-0941-4DA3-9688-A18B1D5ADB09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProntMed.Todo.Domain", "ProntMed.Todo.Domain\ProntMed.Todo.Domain.csproj", "{63AE77DB-2E34-4AB3-A567-B12BE353C79E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProntMed.Todo.DataAccess", "ProntMed.Todo.DataAccess\ProntMed.Todo.DataAccess.csproj", "{9F3744C9-8DB7-4C1C-A79F-63C38A025018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProntMed.Todo.ApplicationService", "ProntMed.Todo.ApplicationService\ProntMed.Todo.ApplicationService.csproj", "{A2064DEA-7F93-452C-9285-A40220648A03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{F17B4D7B-CDAA-4CD9-A759-F41332566FBA}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProntMed.Todo.UI.Angular(1)", "http://localhost:2691", "{6A6416D8-316F-465C-8380-8095570095EE}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_2691"
+		Debug.AspNetCompiler.PhysicalPath = "ProntMed.Todo.UI.Angular\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2691\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_2691"
+		Release.AspNetCompiler.PhysicalPath = "ProntMed.Todo.UI.Angular\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2691\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ProntMed.Todo.UI.Angular\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6D1C14E8-2314-4AAB-9F35-361F1E9C318C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F486D54-FC26-4ECF-8650-DAFB46E6E76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F486D54-FC26-4ECF-8650-DAFB46E6E76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F486D54-FC26-4ECF-8650-DAFB46E6E76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F486D54-FC26-4ECF-8650-DAFB46E6E76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63AE77DB-2E34-4AB3-A567-B12BE353C79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63AE77DB-2E34-4AB3-A567-B12BE353C79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63AE77DB-2E34-4AB3-A567-B12BE353C79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63AE77DB-2E34-4AB3-A567-B12BE353C79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F3744C9-8DB7-4C1C-A79F-63C38A025018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F3744C9-8DB7-4C1C-A79F-63C38A025018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F3744C9-8DB7-4C1C-A79F-63C38A025018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F3744C9-8DB7-4C1C-A79F-63C38A025018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2064DEA-7F93-452C-9285-A40220648A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2064DEA-7F93-452C-9285-A40220648A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2064DEA-7F93-452C-9285-A40220648A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2064DEA-7F93-452C-9285-A40220648A03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6416D8-316F-465C-8380-8095570095EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6416D8-316F-465C-8380-8095570095EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6416D8-316F-465C-8380-8095570095EE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6416D8-316F-465C-8380-8095570095EE}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F486D54-FC26-4ECF-8650-DAFB46E6E76C} = {F17B4D7B-CDAA-4CD9-A759-F41332566FBA}
+		{63AE77DB-2E34-4AB3-A567-B12BE353C79E} = {98240E64-8B17-45E4-8DB6-E2CDCDD5FB84}
+		{9F3744C9-8DB7-4C1C-A79F-63C38A025018} = {6D1C14E8-2314-4AAB-9F35-361F1E9C318C}
+		{A2064DEA-7F93-452C-9285-A40220648A03} = {18F0ECA5-991F-4AD7-8408-CF352F17CC39}
+		{6A6416D8-316F-465C-8380-8095570095EE} = {F17B4D7B-CDAA-4CD9-A759-F41332566FBA}
+		{6D1C14E8-2314-4AAB-9F35-361F1E9C318C} = {871A72DE-0941-4DA3-9688-A18B1D5ADB09}
+	EndGlobalSection
+EndGlobal

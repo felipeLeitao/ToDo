@@ -1,0 +1,69 @@
+﻿<form ng-submit="vm.submit(vm.tarefa)" >
+    <div>
+
+        <input type="hidden" ng-model="vm.tarefa.Codigo" />
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label class="control-label">Titulo</label>
+                    <div>
+                        <input class="form-control text-box single-line" type="text" placeholder="Entre com o Titulo" ng-model="vm.tarefa.Titulo" required="required">
+                        <span class="field-validation-valid text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label class="control-label">Descricao</label>
+                    <div>
+                        <input class="form-control text-box single-line" type="text" placeholder="Entre com a descrição" ng-model="vm.tarefa.Descricao" required="required">
+                        <span class="field-validation-valid text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label class="control-label">Data</label>
+                    <div>
+                        <input class="form-control text-box single-line" type="date" placeholder="Entre com o Titulo" ng-model="vm.tarefa.Data" required="required">
+                        <span class="field-validation-valid text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label class="control-label">Status</label>
+                    <div>
+                        <select class="form-control text-box single-line" ng-model="vm.tarefa.Status" required="required">
+                            <option value="BackLog">BackLog</option>
+                            <option value="ToDo">ToDo</option>
+                            <option value="Doing">Doing</option>
+                            <option value="ToTest">ToTest</option>
+                            <option value="Testing">Testing</option>
+                            <option value="Done">Done</option>
+                        </select>
+                        <span class="field-validation-valid text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-md-5 form-group">
+                <button class="btn btn-danger" type="reset">Limpar</button>
+                <button class="btn btn-success" type="submit">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+</form>

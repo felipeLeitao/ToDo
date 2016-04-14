@@ -1,0 +1,44 @@
+﻿<table class="table table-hover" ng-if="vm.tarefas.length > 0">
+    <thead>
+        <tr>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Data
+            </th>
+
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="item in vm.tarefas">
+            <th>
+                {{item.Titulo}}
+            </th>
+            <th>
+                {{item.Descricao.substring(0, 20)}}
+            </th>
+            <th>
+                {{item.Status}}
+            </th>
+            <th>
+                {{item.Data | date:'MM/dd/yyyy'}}
+            </th>
+
+            <th>
+                <a ui-sref="main.alterar({codigo : item.Codigo})">Editar</a> / <a href="#" ng-click="remover(item)">Remover</a>
+
+            </th>
+        </tr>
+    </tbody>
+</table>

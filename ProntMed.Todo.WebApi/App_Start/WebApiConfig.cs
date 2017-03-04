@@ -34,6 +34,9 @@ namespace ProntMed.Todo.WebApi
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //registra o filtro em todas as actions..
+            //config.Filters.Add(new UnitOfWorkActionFilter());
         }
     }
 }

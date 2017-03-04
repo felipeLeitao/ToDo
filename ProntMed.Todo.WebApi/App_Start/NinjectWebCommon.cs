@@ -22,6 +22,8 @@ namespace ProntMed.Todo.WebApi.App_Start
     using System.Collections.Generic;
     using Ninject.Syntax;
     using System.Web.Http;
+    using Domain.Interfaces.UnityOfWork;
+    using DataAccess.UnityOfWork;
 
     public static class NinjectWebCommon
     {
@@ -79,6 +81,7 @@ namespace ProntMed.Todo.WebApi.App_Start
             kernel.Bind<ITodoApplication>().To<TodoApplication>();
             kernel.Bind<ITodoRepository>().To<TodoRepository>();
             kernel.Bind<DbContext>().To<Conexao>();
+            kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
         }
     }
 

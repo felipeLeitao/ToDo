@@ -16,9 +16,9 @@ namespace ProntMed.Todo.ApplicationService.Implementation
         {
             _todoRepository = todoRepository_;
         }
-        public async Task CreateAsync(TodoEntity obj_)
+        public void CreateAsync(TodoEntity obj_)
         {
-           await _todoRepository.CreateAsync(obj_);
+            _todoRepository.CreateAsync(obj_);
         }
 
         public IList<TodoEntity> GetAll()
@@ -26,14 +26,14 @@ namespace ProntMed.Todo.ApplicationService.Implementation
             return _todoRepository.GetAll();
         }
 
-        public async Task UpdateAsync(TodoEntity obj_)
+        public void UpdateAsync(TodoEntity obj_)
         {
-           await _todoRepository.UpdateAsync(obj_);
+            _todoRepository.UpdateAsync(obj_);
         }
 
-        public async Task DeleteAsync(TodoEntity obj_)
+        public void DeleteAsync(TodoEntity obj_)
         {
-           await _todoRepository.DeleteAsync(obj_);
+           _todoRepository.DeleteAsync(obj_);
         }
 
         public IList<TodoEntity> Get(Expression<System.Func<TodoEntity, bool>> filtro_)

@@ -1,5 +1,7 @@
 ﻿using ProntMed.Todo.ApplicationService.Interfaces;
 using ProntMed.Todo.Domain.Entities;
+using ProntMed.Todo.WebApi.DTO;
+using ProntMed.Todo.WebApi.Filtros;
 using System;
 using System.Linq;
 using System.Net;
@@ -11,7 +13,7 @@ using System.Web.Http.Cors;
 namespace ProntMed.Todo.WebApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    //[CustomAuthentication] estava fazendo um filtro pra validação customizada
+    [UnitOfWorkActionFilter]
     public class TodoController : ApiController
     {
         private readonly ITodoApplication _todoApplication;
@@ -54,11 +56,20 @@ namespace ProntMed.Todo.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<HttpResponseMessage> Cadastrar(TodoEntity obj_)
+        public HttpResponseMessage Cadastrar(Tarefa tarefa)
         {
             try
             {
-                await _todoApplication.CreateAsync(obj_);
+                TodoEntity todo = new TodoEntity()
+                {
+                    Data = DateTime.ParseExact(tarefa.Data, "dd/MM/yyyy", null),
+                    Descricao = tarefa.Descricao,
+                    Status = tarefa.Status,
+                    Titulo = tarefa.Titulo
+                };
+
+
+                _todoApplication.CreateAsync(todo);
                 return Request.CreateResponse(HttpStatusCode.OK, "Tarefa cadastrada com sucesso.");
             }
             catch (Exception)
@@ -68,7 +79,7 @@ namespace ProntMed.Todo.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<HttpResponseMessage> Alterar(TodoEntity obj_)
+        public HttpResponseMessage Alterar(TodoEntity obj_)
         {
             try
             {
@@ -79,7 +90,7 @@ namespace ProntMed.Todo.WebApi.Controllers
                 tarefa.Titulo = obj_.Titulo;
                 tarefa.Status = obj_.Status;
 
-                await _todoApplication.UpdateAsync(tarefa);
+                _todoApplication.UpdateAsync(tarefa);
 
                 return Request.CreateResponse(HttpStatusCode.OK, "Tarefa alterada com sucesso.");
             }
@@ -90,12 +101,12 @@ namespace ProntMed.Todo.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<HttpResponseMessage> Remover(int id)
+        public HttpResponseMessage Remover(int id)
         {
             try
             {
                 var obj = _todoApplication.Get(x => x.Codigo == id).Single();
-                await _todoApplication.DeleteAsync(obj);
+                _todoApplication.DeleteAsync(obj);
                 return Request.CreateResponse(HttpStatusCode.OK, "Tarefa removida com sucesso.");
             }
 

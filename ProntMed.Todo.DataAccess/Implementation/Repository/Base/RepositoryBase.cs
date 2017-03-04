@@ -13,15 +13,16 @@ namespace ProntMed.Todo.DataAccess.Implementation.Repository.Base
         private readonly DbContext _conexao;
 
         private readonly DbSet<T> _tabela;
+
         public RepositoryBase(DbContext conexao_)
         {
             _conexao = conexao_;
             _tabela = _conexao.Set<T>();
         }
-        public async Task CreateAsync(T obj_)
+        public void CreateAsync(T obj_)
         {
             _tabela.Add(obj_);
-            await _conexao.SaveChangesAsync();
+            _conexao.SaveChanges();
         }
 
         public IList<T> GetAll()
@@ -29,16 +30,14 @@ namespace ProntMed.Todo.DataAccess.Implementation.Repository.Base
             return _tabela.ToList();
         }
 
-        public async Task UpdateAsync(T obj_)
+        public void UpdateAsync(T obj_)
         {
             _conexao.Entry(obj_).State = EntityState.Modified;
-           await _conexao.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(T obj_)
+        public void DeleteAsync(T obj_)
         {
             _tabela.Remove(obj_);
-            await _conexao.SaveChangesAsync();
         }
 
         public IList<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> filtro_)
